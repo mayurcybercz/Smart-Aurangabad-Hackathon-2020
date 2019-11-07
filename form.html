@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Sponsorship Form</title>
+    
+  <!-- SEO WITH META TAGS -->
+
+  <meta name="description" content="This is the official webpage of Smart Aurangabad Hackathon 2020.">
+
+  <meta name="author" content="Government College of Engineering Aurangabad">
+
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="http://sah.geca.ac.in" />
+  <meta name="keywords" content="Smart Aurangabad Hackathon, sah, geca, government college of engineering aurangabad, hackathon, innovation" >
+
+  <meta name="copyright" content="Government College of Engineering Aurangabad" >
+  <meta name="DC.title" content="Smart Aurangabad Hackathon Official Website" >
+
+
+  <!-- END SEO WITH META TAGS -->
+    
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+
+    <!--Poppins font-->
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
+    <style>
+        body {
+            font-family: 'Poppins';
+            /*background-image: url("../Smart-Aurangabad-Hackathon-2020/img/bg-masthead1.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+            background-size: cover;*/
+        }
+
+        .jumbotron {
+            /*opacity: 0.8;*/
+        }
+
+        hr.divider {
+            max-width: 3.25rem;
+            border-width: 0.2rem;
+            border-color: #25A9E0;
+        }
+
+        .page-section {
+            padding: 4rem 0;
+        }
+
+        .btn-xl {
+            padding: 1.25rem 2.25rem;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            border: none;
+            border-radius: 10rem;
+        }
+        .loader {
+            border: 16px solid #f3f3f3; /* Light grey */
+            border-top: 16px solid #3498db; /* Blue */
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: spin 1s linear infinite;
+            position: fixed;
+            left: 50%;
+            top: 35%;
+            visibility: hidden;
+            }
+        @media(max-width: 768px){
+            .loader{
+                left: 45%;
+            }
+        }
+        @media(max-width: 480px){
+            .loader{
+                left: 40%;
+            }
+        }
+
+            @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+            }
+
+            #notification {
+                position:fixed;
+                top:10px;
+                width:100%;
+                z-index:105;
+                text-align:center;
+                font-weight:normal;
+                font-size:18px;
+                font-weight:bold;
+                color:white;
+                background-color:#FF7800;
+                padding:10px;
+            }
+            #notification span.dismiss {
+                border:2px solid #FFF;
+                padding:0 10px;
+                cursor:pointer;
+                float:right;
+                margin-right:10px;
+            }
+            #notification a {
+                color:white;
+                text-decoration:none;
+                font-weight:bold
+            }
+            .required-red{
+                color: red;
+            }
+    </style>
+
+       <!-- GOOGLE ANALYTICS -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-151672961-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-151672961-1');
+    </script>
+
+<!-- END GOOGLE ANALYTICS -->
+
+</head>
+
+<body>
+    <div id="loader" class="loader"></div>
+    <div id="notification" style="display: none;">
+        <div id="notification-text"  ></div>
+        <span class="dismiss"><a title="dismiss this notification">x</a></span>
+      </div>
+    <div class="container">
+
+        <!--Heading-->
+        <section class="page-section ">
+            <div class="container ">
+                <div class="row justify-content-center ">
+                    <div class="col-lg-8 text-center ">
+                        <h2 class="mt-0 ">Problem Statement submission</h2>
+                        <hr class="divider my-4 ">
+                        <p class="text-muted mb-5 ">Thank you so much for showing your interest! Please fill out the form below and we'll get back to
+                            you as soon as possible.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Heading ends-->
+
+        <!--Company info-->
+        <div class="jumbotron bg-light">
+            <form id="form2">
+                <br>
+                <div class="form-group">
+                    <label for="companyName">Company Name  <span class="required-red">*</span></label>
+                    <input type="text" class="form-control" id="companyName" name="companyName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="token">Token  <span class="required-red">*</span></label>
+                    <input type="text" class="form-control" id="token" name="token" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="mail">Email address</label>
+                    <input type="email" class="form-control" id="mail" name="mail" placeholder="name@example.com" required>
+                </div>
+                <br>
+            </form>
+        </div>
+        <!--Company info ends-->
+
+        <br>
+
+        <!--Form Start-->
+        <form id="form1">
+            <div class="form-holder jumbotron bg-light">
+
+                <div class="form-group">
+                    <label for="title">Problem Statement title <span class="required-red">*</span></label>
+                    <input required type="text" name="title" class="form-control" id="title">
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Problem Domain  <span class="required-red">*</span></label>
+                    <select name="domain" class="form-control" id="exampleFormControlSelect1">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Description  <span class="required-red">*</span></label>
+                    <textarea required class="form-control" name="description" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Reference links (if any)</label>
+                    <textarea name="reference" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+
+                
+
+            </div>
+
+          
+         
+
+            <br>
+
+            <!--Submit-->
+            <div class="row justify-content-center">
+                <input type="submit" class="btn btn-light btn-xl" placeholder="Submit!" >
+            </div>
+            <!--Submit ends-->
+
+            <br>
+
+        </form>
+        <!--Form End-->
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-light py-5 ">
+        <div class="container ">
+            <div class="small text-center text-muted ">Copyright &copy; 2019 - Smart Aurangabad Hackathon</div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script>
+     
+        
+        
+            $('#form1').submit( function(e) {
+                e.preventDefault();
+                $("#loader").css("visibility", "visible");
+                
+                var request = $.ajax({
+                    url  : "http://134.209.186.127:4001/api/ps/",
+                    type : 'POST',
+                    data : $('#form1, #form2').serialize(),
+                    
+                }).done(function(response){
+                    $("#loader").css("visibility", "hidden");
+                    console.log(response);
+                    var succ = response["done"];
+                    console.log('@@@@@');
+                    console.log(succ);
+                    if(!succ && response.code == 'b1'){
+                        // alert("Your token and company name didn't match");
+                        $("#notification").fadeIn("slow");
+                        $("#notification-text").append("Your token and company name didn't match. ");
+                    }
+                    else if(!succ && response.code == 'b2'){
+                        $("#notification").fadeIn("slow");
+                        $("#notification-text").append("Something is wrong in your data");
+                    }
+                    else if(!succ){
+                        console.log('############');
+                        console.log(succ);
+                        $("#notification").fadeIn("slow");
+                        $("#notification-text").append("Somethins is wrong, contact organizers 1");
+                    }
+                    else{
+                        var name_ = $("#companyName").val(); 
+                        var token_ = $("#token").val(); 
+                        var mail_ = $("#mail").val(); 
+
+                        window.location.href = "success.html?company=" + name_ + "&token=" + token_ + "&mail=" + mail_;
+                    }
+                }).fail(function(response){
+                    $("#loader").css("visibility", "hidden");
+                    console.log(response);
+                });  
+                
+            });
+     
+        
+ $(".dismiss").click(function(){
+        $("#notification-text").html("");
+       $("#notification").fadeOut("slow");
+});
+
+
+function parseURLParams(url) {
+    var queryStart = url.indexOf("?") + 1,
+        queryEnd   = url.indexOf("#") + 1 || url.length + 1,
+        query = url.slice(queryStart, queryEnd - 1),
+        pairs = query.replace(/\+/g, " ").split("&"),
+        parms = {}, i, n, v, nv;
+
+    if (query === url || query === "") return [];
+
+    for (i = 0; i < pairs.length; i++) {
+        nv = pairs[i].split("=", 2);
+        n = decodeURIComponent(nv[0]);
+        v = decodeURIComponent(nv[1]);
+
+        if (!parms.hasOwnProperty(n)) parms[n] = [];
+        parms[n].push(nv.length === 2 ? v : null);
+    }
+    return parms;
+}
+
+    console.log(parseURLParams(window.location.href));
+    // console.log(Object.keys(parseURLParams(window.location.href)).length);
+    $(document).ready(function(){
+        params = parseURLParams(window.location.href)
+        if( Object.keys(params).length == 3 ){
+                var name =  document.getElementById('companyName');
+                var token =  document.getElementById('token');
+                var mail =  document.getElementById('mail');
+
+                name.value = params["company"][0];
+                token.value = params["token"][0];
+                mail.value = params["mail"][0];
+        }
+    });
+
+    </script>
+</body>
+
+</html>

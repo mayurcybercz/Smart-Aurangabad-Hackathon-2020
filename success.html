@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Thank You-Smart Aurangabad Hackathon</title>
+
+      <!-- SEO WITH META TAGS -->
+
+  <meta name="description" content="This is the official webpage of Smart Aurangabad Hackathon 2020.">
+
+  <meta name="author" content="Government College of Engineering Aurangabad">
+
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="http://sah.geca.ac.in" />
+
+  <meta name="keywords" content="Smart Aurangabad Hackathon, sah, geca, government college of engineering aurangabad, hackathon, innovation" >
+
+  <meta name="copyright" content="Government College of Engineering Aurangabad" >
+  <meta name="DC.title" content="Smart Aurangabad Hackathon Official Website" >
+
+
+  <!-- END SEO WITH META TAGS -->
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+
+    <!--Poppins font-->
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
+    <style>
+        body {
+            font-family: 'Poppins';
+            /*background-image: url("../Smart-Aurangabad-Hackathon-2020/img/bg-masthead1.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+            background-size: cover;*/
+        }
+
+        .jumbotron {
+            /*opacity: 0.8;*/
+        }
+
+        hr.divider {
+            max-width: 3.25rem;
+            border-width: 0.2rem;
+            border-color: #25A9E0;
+        }
+
+        .page-section {
+            padding: 4rem 0;
+        }
+
+        .btn-xl {
+            padding: 1.25rem 2.25rem;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            border: none;
+            border-radius: 10rem;
+        }
+        #company-name{
+            color: brown;
+        }
+        button{
+            margin: 3%;
+        }
+
+    </style>
+
+    <link rel="stylesheet" href="">
+       <!-- GOOGLE ANALYTICS -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-151672961-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-151672961-1');
+    </script>
+
+<!-- END GOOGLE ANALYTICS -->
+</head>
+
+<body>
+    <div id="loader" class="loader"></div>
+    <div id="notification" style="display: none;">
+        <div id="notification-text"  ></div>
+        <span class="dismiss"><a title="dismiss this notification">x</a></span>
+      </div>
+    <div class="container">
+
+        <!--Heading-->
+        <section class="page-section ">
+            <div class="container ">
+                <div class="row justify-content-center ">
+                    <div class="col-lg-8 text-center ">
+                        <h2 class="mt-0 ">Thank You <span id="company-name" ></span> for the Problem statement.</h2>
+                        <hr class="divider my-4 ">
+                        <p class="text-muted mb-5 "> We really appreciate your inputs for Smart Aurangabad Hackathon. If any updates in the problem statement you will be contacted by our organizers </p>
+                        
+                        <button class="btn btn-success" id="another" >Submit Another problem statement</button>
+                        <button class="btn btn-success" id="all" >View All Problem Statements</button>
+
+                        <br>
+                        <br>
+
+                        <p class="text-muted mb-5 "> This problem statement falls under our <a href="https://www.google.com" target="_blank">Problem statement terms and conditions.</a> </p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Heading ends-->
+
+      
+        <br>
+
+     
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-light py-5 ">
+        <div class="container ">
+            <div class="small text-center text-muted ">Copyright &copy; 2019 - Smart Aurangabad Hackathon</div>
+        </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script>
+     
+        
+
+
+function parseURLParams(url) {
+    var queryStart = url.indexOf("?") + 1,
+        queryEnd   = url.indexOf("#") + 1 || url.length + 1,
+        query = url.slice(queryStart, queryEnd - 1),
+        pairs = query.replace(/\+/g, " ").split("&"),
+        parms = {}, i, n, v, nv;
+
+    if (query === url || query === "") return [];
+
+    for (i = 0; i < pairs.length; i++) {
+        nv = pairs[i].split("=", 2);
+        n = decodeURIComponent(nv[0]);
+        v = decodeURIComponent(nv[1]);
+
+        if (!parms.hasOwnProperty(n)) parms[n] = [];
+        parms[n].push(nv.length === 2 ? v : null);
+    }
+    return parms;
+}
+
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+    // console.log(parseURLParams(window.location.href));
+    // console.log(Object.keys(parseURLParams(window.location.href)).length);
+    $(document).ready(function(){
+        params = parseURLParams(window.location.href)
+        
+                // var name =  document.getElementById('companyName');
+                // // var token =  document.getElementById('token');
+                // // var mail =  document.getElementById('mail');
+                $('#company-name').html(capitalizeFirstLetter(params["company"][0]));
+                // name.value = params["company"][0];
+                // token.value = params["token"][0];
+                // mail.value = params["mail"][0];
+        $('#another').click(function(e){
+            e.preventDefault();
+            var name = params["company"][0];
+            var token = params["token"][0];
+            var mail = params["mail"][0];
+            window.location.href = "form.html?company=" + name + "&token=" + token + "&mail=" + mail;
+        })
+
+        $('#all').click(function(e){
+            e.preventDefault();
+            var name = params["company"][0];
+            var token = params["token"][0];
+            var mail = params["mail"][0];
+            window.location.href = "all.html?company=" + name + "&token=" + token + "&mail=" + mail;
+        });
+
+    });
+
+    </script>
+</body>
+
+</html>
