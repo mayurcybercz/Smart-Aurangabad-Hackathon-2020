@@ -9802,3 +9802,27 @@ header.masthead h1 {
   color: #3f729b ;
   font-size: 1.4rem;
 }
+
+#thanks-for-visit{
+    margin: 0;
+    color: whitesmoke ;
+    font-size: 1.9rem;
+}
+
+.my-alert{
+  position: fixed;
+  z-index: 99999;
+  bottom: 0 !important;
+  width: 100%;
+}
+.cook-button{
+  font-size: 12px;
+  margin: 0, 5%;
+}
+.cookie-button-container{
+  text-align: center;
+}
+.cookie-info{
+  text-align: center;
+  margin: 0;
+}

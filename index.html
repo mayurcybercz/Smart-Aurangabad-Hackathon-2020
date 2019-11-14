@@ -398,6 +398,26 @@
     </div>
   </footer>
 
+  <div class="alert alert-info alert-dismissible my-alert">
+      <div class="container-fluid" >
+
+          <div class="row">
+        <div class="col-md-12 cookie-info">
+            This website uses <strong>cookies</strong>. Press accept if you are okey with this, or press reject to redirect out of the website.
+        </div>     
+        <div class="col-md-4"></div>
+        <div class="col-md-4 cookie-button-container" >
+          <button href="#" class="btn btn-primary cook-button" data-dismiss="alert" >Accept</button>
+          <button href="#" id="cookie-reject" class="btn btn-danger cook-button">Reject</button>
+        </div>
+        <div class="col-md-4"></div>
+
+      </div>
+
+    </div>
+    
+  </div>
+
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js "></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js "></script>
@@ -413,6 +433,10 @@
     $(document).ready(function () {
       $("#event-logo").click(function (e) {
         window.location.href = "/";
+      })
+      $("#cookie-reject").click(function(e){
+        e.preventDefault();
+        window.location.href = "cookie-reject.html";
       })
     })
   </script>
