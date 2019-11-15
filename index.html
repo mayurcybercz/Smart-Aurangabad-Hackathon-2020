@@ -42,17 +42,18 @@
   <!-- GOOGLE ANALYTICS -->
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <!-- Global site tag (gtag.js) - Google Analytics -->
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-151672961-2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-151672961-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'UA-151672961-2');
-</script>
+    gtag('config', 'UA-151672961-2');
 
-<script data-ad-client="ca-pub-7314300118536926" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  </script>
+
+  <script data-ad-client="ca-pub-7314300118536926" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <!-- END GOOGLE ANALYTICS -->
 
 </head>
@@ -242,6 +243,13 @@
           </a>
         </div>
 
+        <!--Sponsor 2-->
+        <div class="col-lg-4" style="max-width:25%; width:25%;">
+          <a target="_blank" href="#" alt="">
+            <img style="width:100%; height: auto;" alt="sponsor logo" src="./img/restdb-logo-white.png">
+          </a>
+        </div>
+
       </div>
 
     </div>
@@ -399,15 +407,16 @@
   </footer>
 
   <div class="alert alert-info alert-dismissible my-alert">
-      <div class="container-fluid" >
+    <div class="container-fluid">
 
-          <div class="row">
+      <div class="row">
         <div class="col-md-12 cookie-info">
-            This website uses <strong>cookies</strong>. Press accept if you are okey with this, or press reject to redirect out of the website.
-        </div>     
+          This website uses <strong>cookies</strong>. Press accept if you are okey with this, or press reject to redirect
+          out of the website.
+        </div>
         <div class="col-md-4"></div>
-        <div class="col-md-4 cookie-button-container" >
-          <button href="#" class="btn btn-primary cook-button" data-dismiss="alert" >Accept</button>
+        <div class="col-md-4 cookie-button-container">
+          <button href="#" class="btn btn-primary cook-button" data-dismiss="alert">Accept</button>
           <button href="#" id="cookie-reject" class="btn btn-danger cook-button">Reject</button>
         </div>
         <div class="col-md-4"></div>
@@ -415,7 +424,7 @@
       </div>
 
     </div>
-    
+
   </div>
 
   <!-- Bootstrap core JavaScript -->
@@ -434,7 +443,7 @@
       $("#event-logo").click(function (e) {
         window.location.href = "/";
       })
-      $("#cookie-reject").click(function(e){
+      $("#cookie-reject").click(function (e) {
         e.preventDefault();
         window.location.href = "cookie-reject.html";
       })
