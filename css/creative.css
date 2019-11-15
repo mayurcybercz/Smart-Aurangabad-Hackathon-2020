@@ -9793,9 +9793,16 @@ header.masthead h1 {
     /*visibility: hidden;*/
   }
 }
-
-
 /*END SPONSORS*/
+
+/*geca-logo*/
+@media( max-width: 768px ){
+  .geca-img{
+    display:block;
+    margin:0 auto;
+  }
+}
+/*end geca-logo*/
 
 #hashtag{
   margin: 0;
