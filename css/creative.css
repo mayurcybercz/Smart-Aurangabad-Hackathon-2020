@@ -9833,3 +9833,14 @@ header.masthead h1 {
   text-align: center;
   margin: 0;
 }
+
+/* Trophy color change */
+.golden{
+  color: gold;
+}
+.silver{
+  color: silver;
+}
+.bronze{
+  color: #945d41;
+}
