@@ -90,6 +90,26 @@
   text-align: center;
   z-index: 90020;
 }
+@media(max-width: 1000px){
+  .modal_info{
+    padding: 40px 70px;
+  }
+}
+@media(max-width: 678px){
+  .modal_info{
+    padding: 30px 50px;
+  }
+}
+@media(max-width: 500px){
+  .modal_info{
+    padding: 25px 40px;
+  }
+}
+@media(max-width: 400px){
+  .modal_info{
+    padding: 20px 30px;
+  }
+}
 
 .modal_overlay {
   background: rgba(0, 0, 0, 0.5);
@@ -759,12 +779,44 @@ button.modal_close span:after {
   (function(){
 var $content = $('.modal_info').detach();
 
+var getWidth = function(){
+  
+  var mq = window.matchMedia( "(max-width: 400px)" );
+    if (mq.matches) {
+        return 350;
+    }
+    else {
+      var mq = window.matchMedia( "(max-width: 500px)" );
+            if (mq.matches) {
+                return 380;
+            }
+            else {
+              var mq = window.matchMedia( "(max-width: 678px)" );
+                if (mq.matches) {
+                    return 420;
+                }
+                else {
+                  var mq = window.matchMedia( "(max-width: 1000px)" );
+                      if (mq.matches) {
+                          return 450;
+                      }
+                      else {
+                          // window width is greater than 570px
+                          return 540;
+                      }
+                }
+            }
+    }
+
+  return 540;
+}
+
 setTimeout( function(e){
   // alert('adrak');
   console.log(modal);
   modal.open({
     content: $content,
-    width: 540,
+    width: getWidth(),
     height: 240,
   });
   $content.addClass('modal_content');
