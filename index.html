@@ -55,9 +55,156 @@
   <script data-ad-client="ca-pub-7314300118536926" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <!-- END GOOGLE ANALYTICS -->
 
+  <!-- ADHOC for notification -->
+  <style>
+    
+    @import url(https://fonts.googleapis.com/css?family=Palanquin:700);
+    .myh1 {
+  color: #A6A49C;
+  font-family: 'Palanquin', Arial, sans-serif;
+}
+
+.myp {
+  color: #474544;
+  font-family: 'Helvetica', Arial, sans-serif;
+  font-size: 14px;
+}
+
+
+.mymodal {
+  opacity: 0;
+  padding: 50px;
+  position: absolute;
+  z-index: 90020;
+  /* border: 2px solid red; */
+  -webkit-transition: opacity 600ms linear 600ms;
+  -moz-transition: opacity 600ms linear 600ms;
+  -ms-transition: opacity 600ms linear 600ms;
+  -o-transition: opacity 600ms linear 600ms;
+  transition: opacity 600ms linear 600ms;
+}
+
+.modal_info {
+  background: #FCF9F2;
+  padding: 50px 100px;
+  text-align: center;
+  z-index: 90020;
+}
+
+.modal_overlay {
+  background: rgba(0, 0, 0, 0.5);
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  overflow: auto;
+  position: fixed;
+  right: 0;
+  top: 0;
+  visibility: hidden;
+  z-index: 9000;
+  -webkit-transition: opacity 200ms linear;
+  -moz-transition: opacity 200ms linear;
+  -ms-transition: opacity 200ms linear;
+  -o-transition: opacity 200ms linear;
+  transition: opacity 200ms linear;
+}
+
+.display {
+  opacity: 1;
+  visibility: visible;
+}
+
+.conceal {
+  visibility: visible;
+}
+
+button.modal_close {
+  background: #363D4E;
+  border: none;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  color: #FFFFFF;
+  cursor: pointer;
+  outline: none;
+  width: 52px;
+  height: 52px;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  -webkit-transition: -webkit-transform 600ms;
+  -moz-transition: -moz-transform 600ms;
+  -ms-transition: -ms-transform 600ms;
+  -o-transition: -o-transform 600ms;
+  transition: transform 600ms;
+}
+
+button.modal_close:hover {
+  background: #3E465A;
+  -webkit-transform: rotate(360deg) scale(1.10);
+  -moz-transform: rotate(360deg) scale(1.10);
+  -ms-transform: rotate(360deg) scale(1.10);
+  -o-transform: rotate(360deg) scale(1.10);
+  transform: rotate(360deg) scale(1.10);
+  -webkit-transition: -webkit-transform 600ms;
+  -moz-transition: -moz-transform 600ms;
+  -ms-transition: -ms-transform 600ms;
+  -o-transition: -o-transform 600ms;
+  transition: transform 600ms;
+}
+
+button.modal_close span, span:before, span:after {
+  background: #FFFFFF;
+  content: '';
+  cursor: pointer;
+  display: block;
+  height: 2px;
+  position: absolute;
+  width: 20px;
+}
+
+button.modal_close span:first-child {
+  background: none;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+button.modal_close span:before {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+button.modal_close span:after {
+  -webkit-transform: translateY(-2px) rotate(-45deg);
+  -moz-transform: translateY(-2px) rotate(-45deg);
+  -ms-transform: translateY(-2px) rotate(-45deg);
+  -o-transform: translateY(-2px) rotate(-45deg);
+  transform: translateY(-2px) rotate(-45deg);
+  top: 2px;
+}
+
+  </style>
+
 </head>
 
 <body id="page-top">
+
+  <div class="modal_info">
+    <h1 class="myh1">Results will be declared in few hours</h1>
+    <!-- <p class="myp">It may not look like much, but it still does exactly what it says straight out of the box.</p> -->
+  </div>
+  <div class="modal_overlay">
+  </div>
+
 
   <!-- Navigation -->
   <nav class="navbar fixed-top navbar-expand-lg py-3" id="mainNav" style="background-color: #1a1a1a">
@@ -604,6 +751,75 @@
       })
     })
   </script>
+
+
+<script>
+
+
+  (function(){
+var $content = $('.modal_info').detach();
+
+setTimeout( function(e){
+  // alert('adrak');
+  console.log(modal);
+  modal.open({
+    content: $content,
+    width: 540,
+    height: 240,
+  });
+  $content.addClass('modal_content');
+  $('.mymodal, .modal_overlay').addClass('display');
+  $('.open_button').addClass('load');
+}, 500);
+}());
+
+var modal = (function(){
+
+var $close = $('<button role="button" class="modal_close" title="Close"><span></span></button>');
+var $content = $('<div class="modal_content"/>');
+var $modal = $('<div class="mymodal"/>');
+var $window = $(window);
+
+$modal.append($content, $close);
+
+$close.on('click', function(e){
+$('.mymodal, .modal_overlay').addClass('conceal');
+$('.mymodal, .modal_overlay').removeClass('display');
+$('.open_button').removeClass('load');
+e.preventDefault();
+modal.close();
+});
+
+return {
+center: function(){
+  var top = (Math.max($window.height() - $modal.outerHeight(), 0)  / 2) - 50;
+  var left = Math.max($window.width() - $modal.outerWidth(), 0) / 2;
+  $modal.css({
+    top: top + $window.scrollTop(),
+    left: left + $window.scrollLeft(),
+  });
+},
+open: function(settings){
+  $content.empty().append(settings.content);
+
+  $modal.css({
+    width: settings.width || 'auto',
+    height: settings.height || 'auto'
+  }).appendTo('body');
+
+  modal.center();
+  $(window).on('resize', modal.center);
+},
+close: function(){
+  $content.empty();
+  $modal.detach();
+  $(window).off('resize', modal.center);
+}
+};
+}());
+
+
+</script>
 
 </body>
 
